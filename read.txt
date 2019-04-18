@@ -40,7 +40,11 @@ $ git checkout --<file>  - отменить изменения в одном modified file  (не добавле
 $ git checkout . - отменить изменения во всех  modified file   (не добавленные в индекс)
 $ git clean -xdf - удалить новые файлы
 
-$ git reset --<file> - вернуть в Unstaged (из добавленных в индекс в недобавленные)
+$ git reset --<file> - вернуть в unstaged (из добавленных в индекс в недобавленные)
 
 $ git commit -ammend - дописать  commit in local branch (обновить предыдущий commit)
 $ git reset HEAD^^  (HEAD~2) удалить  commit in local branch
+$ git reset --soft   - from commit to index
+$ git reset --mixed  - from commit to unstaged
+$ git reset --hard   - delete commit
+$ git revert sha1 (sha1 взять из git log) delete from remote repo
