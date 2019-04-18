@@ -36,3 +36,11 @@ $ git gui& - вызов GUI
 
 $ gitk - история коммитов
 -----------------------------------------
+$ git checkout --<file>  - отменить изменения в одном modified file  (не добавленные в индекс)
+$ git checkout . - отменить изменения во всех  modified file   (не добавленные в индекс)
+$ git clean -xdf - удалить новые файлы
+
+$ git reset --<file> - вернуть в Unstaged (из добавленных в индекс в недобавленные)
+
+$ git commit -ammend - дописать  commit in local branch (обновить предыдущий commit)
+$ git reset HEAD^^  (HEAD~2) удалить  commit in local branch
