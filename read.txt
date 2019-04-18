@@ -51,3 +51,4 @@ $ git reset --hard   - delete commit
 $ git revert sha1 (sha1 взять из git log) delete from remote repo
 --------------------
 $ git checkout -b 'feature' - Создать ветку и перейти в нее
+$ git checkout master - перейти в мастер
