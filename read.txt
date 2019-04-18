@@ -1,16 +1,9 @@
-
-Загрузить гит можно тут: http://git-scm.com/downloads
-
-Устанавливайте гит с настройками по умолчанию.
-
 Генерация пары ssh ключей:
 
      $ ssh-keygen -t rsa -C "lenkopv@gmail.com"
 
 Публичный ключ (id_rsa) нужно оправить владельцу репозитория для получения прав работы. Или загрузить в настройки профиля в bitbucket/github/gitlab
-
-Настройка имени пользователя и емейла:
-
+-------ПЕРВИЧНАЯ НАСТРОЙКА----------------
 $ git config --global user.name "Pavel Lenko"
 $ git config --global user.email "lenkopv@gmail.com"
 -----------------------------------------
@@ -21,16 +14,12 @@ $ git clone git@github.com:plenko/myfirst.git
 -----------------------------------------
 добавление файла
 $ git add <file> - добавление в индекс
-
-$ git status - статус
-
 $ git commit -m "comment" - закомитить
+$ git push - добавление данных локального репозитория на удаленный
+$ git pull добавление данных удаленного репозитория на локальный
 
 $ git log - история коммитов
-
-$ git push - добавление данных локального репозитория на удаленный
-
-$ git pull добавление данных удаленного репозитория на локальный
+$ git status - статус
 -----------------------------------------
 $ git gui& - вызов GUI
 
@@ -49,6 +38,19 @@ $ git reset --soft   - from commit to index
 $ git reset --mixed  - from commit to unstaged
 $ git reset --hard   - delete commit
 $ git revert sha1 (sha1 взять из git log) delete from remote repo
---------------------
+
+----------BRANCHING AND MERGE----------
 $ git checkout -b 'feature' - Создать ветку и перейти в нее
 $ git checkout master - перейти в мастер
+$ git merge feature - слить ветку feature в master (fastforward merge)
+$ git branch --all - посмотреть все ветки
+-----------------------------------------------------------
+$ git tag <name> - добавление тэга к текущему коммиту
+$ git tag -list - список тегов
+$ git push -tags - залить теги на удаленный репозиторий
+-----------------------------------------------------------
+$ git stash save “description” -Save working directory
+$ git stash list - View stashes
+$ git stash pop (Bring them back and remove from stash)
+$ git stash apply (Bring them back leave in stash)
+$ git stash drop (clear)  - Remove
